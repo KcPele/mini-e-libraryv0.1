@@ -24,7 +24,7 @@ const Register = () => {
         <div className="max-w-[36.6rem] w-full rounded-md bg-white p-2 lg:p-20">
           <form
             onSubmit={handleSubmission}
-            className="rounded-md p-16 border-2 border-purple-500/20"
+            className="rounded-md p-3 lg:p-16 border-2 border-purple-500/20"
           >
             <div className="flex flex-col text-black">
               <label>Full Name</label>
