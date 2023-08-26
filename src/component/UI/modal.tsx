@@ -1,6 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-const ChurchModal = ({
+const Modal = ({
   isOpen,
   closeModal,
 }: {
@@ -160,4 +160,4 @@ const ChurchModal = ({
   );
 };
 
-export default ChurchModal;
+export default Modal;

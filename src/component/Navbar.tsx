@@ -6,7 +6,7 @@ import Link from "next/link";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-black ">
+    <nav className="bg-[#4fc18f] ">
       <div className=" px-4 max-w-[1800px] mx-auto">
         <div className="flex items-center justify-between py-2">
           <div className="flex items-center justify-between w-full ">
