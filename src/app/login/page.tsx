@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <div className="">
       <div className="flex justify-center items-center pt-32">
-        <div className="max-w-[36.6rem] w-full rounded-md bg-white p-20">
+        <div className="max-w-[36.6rem] w-full rounded-md bg-white p-2 lg:p-20">
           <form
             onSubmit={handleSubmission}
             className="rounded-md p-16 border-2 border-[#4fc18f]/20"
