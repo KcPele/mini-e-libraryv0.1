@@ -158,7 +158,10 @@ function Navbar() {
               </Link>
               <Link
                 href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="mb-2text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
                 DATABASE
               </Link>
