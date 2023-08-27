@@ -7,7 +7,7 @@ import React from "react";
 const BookCard = ({ img, title, discription, url }: IBookCard) => {
   let router = useRouter();
   return (
-    <div className="max-w-2xl w-full rounded-xl overflow-hidden bg-red-950">
+    <div className="max-w-2xl w-full rounded-xl overflow-hidden bg-[#4fc18f]">
       <div className="max-h-[400px]">
         <img className="w-full object-contain" src={img} alt="" />
       </div>
@@ -17,12 +17,12 @@ const BookCard = ({ img, title, discription, url }: IBookCard) => {
           <div className="w-[50%]">
             <hr />
           </div>
-          <p className="max-w-[60%] mb-6 text-gray-300 text-base truncate">
+          <p className="max-w-[60%] mb-6 text-white/80 text-base truncate">
             {discription}
           </p>
           <button
             onClick={() => router.push(url)}
-            className="text-red-400 w-fit "
+            className="text-white/80 w-fit "
           >
             Tap to read the whole book
           </button>

@@ -1,6 +1,7 @@
+"use client";
 import FAQ from "@/component/FAQ";
 import BookCard from "@/component/BookCard";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "@/component/Footer";
 
 const slidedatas = [
@@ -26,6 +27,10 @@ const slidedatas = [
   },
 ];
 const Tour = () => {
+  const [search, setSearch] = useState("");
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
   return (
     <main className="  bg-white  min-h-screen">
       <div className="carousel relative  w-full max-h-[34rem] h-fit">
@@ -59,6 +64,21 @@ const Tour = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="px-3">
+        <div className="mt-10 mx-auto max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
+          <input
+            type="text"
+            placeholder="Search anything"
+            value={search}
+            onChange={handleSearch}
+            className="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0"
+            name="search"
+          />
+          <button className="flex flex-row items-center justify-center min-w-[130px] px-4 rounded-full   border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-[#4fc18f] text-white font-medium tracking-wide border-transparent py-1.5 h-[38px] -mr-3">
+            Search
+          </button>
+        </div>
       </div>
       <div className=" px-10 py-16 md:py-28 grid gap-10 md:gap-20 md:grid-cols-[fit-content(100%)_1fr_fit-content(100%)]">
         <div className=" text-black font-bold text-2xl md:text-4xl">

@@ -45,7 +45,7 @@ function Navbar() {
 
                 <Link
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500  font-medium"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-[#4fc18f] font-medium"
                 >
                   Contact Us
                 </Link>
@@ -156,7 +156,7 @@ function Navbar() {
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-gradient-to-r to-sky-500 from-indigo-500 text-center  font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-[#4fc18f] text-center  font-medium"
               >
                 Contact Us
               </Link>
