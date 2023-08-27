@@ -11,7 +11,7 @@ function Navbar() {
         <div className="flex items-center justify-between py-2">
           <div className="flex items-center justify-between w-full ">
             <div className="flex-shrink-0">
-              <h3 className="text-white text-xl font-bold">E-Library</h3>
+              <h3 className="text-white text-xl font-bold">NUMLW</h3>
             </div>
             <div className="hidden nav:block">
               <div className="ml-10 flex items-baseline space-x-4 ">
@@ -19,35 +19,41 @@ function Navbar() {
                   href="/"
                   className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md  font-medium"
                 >
-                  Home
+                  HOME
                 </Link>
 
                 <Link
                   href="/#"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
-                  E - Books
-                </Link>
-
-                <Link
-                  href="/login"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
-                >
-                  Login
-                </Link>
-
-                <Link
-                  href="/register"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
-                >
-                  Register
+                  ABOUT
                 </Link>
 
                 <Link
                   href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-[#4fc18f] font-medium"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
                 >
-                  Contact Us
+                  CATALOG OPAC
+                </Link>
+
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
+                >
+                  EBOOKS
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
+                >
+                  DATABASE
+                </Link>
+
+                <Link
+                  href="#"
+                  className="text-white hover:bg-gray-700 hover:text-white px-6 md:px-10 py-3 rounded-full bg-[#4fc18f] font-medium"
+                >
+                  CONTACT
                 </Link>
               </div>
             </div>
@@ -118,7 +124,7 @@ function Navbar() {
                 }}
                 className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md  font-medium"
               >
-                Home
+                HOME
               </Link>
 
               <Link
@@ -128,27 +134,7 @@ function Navbar() {
                 }}
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
-                E - Books
-              </Link>
-
-              <Link
-                href="/login"
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
-              >
-                Login
-              </Link>
-
-              <Link
-                href="/register"
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
-              >
-                Register
+                ABOUT
               </Link>
 
               <Link
@@ -156,9 +142,35 @@ function Navbar() {
                 onClick={() => {
                   setIsOpen(false);
                 }}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-[#4fc18f] text-center  font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
               >
-                Contact Us
+                CATALOG OPAC
+              </Link>
+
+              <Link
+                href="#"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md  font-medium"
+              >
+                EBOOKS
+              </Link>
+              <Link
+                href="#"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"
+              >
+                DATABASE
+              </Link>
+
+              <Link
+                href="#"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+                className="text-white hover:bg-gray-700 hover:text-white block px-8 py-3 rounded-full bg-[#4fc18f] text-center  font-medium"
+              >
+                CONTACT US
               </Link>
             </div>
           </div>

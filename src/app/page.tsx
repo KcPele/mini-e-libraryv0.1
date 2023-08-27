@@ -3,27 +3,88 @@ import FAQ from "@/component/FAQ";
 import BookCard from "@/component/BookCard";
 import React, { useState } from "react";
 import Footer from "@/component/Footer";
+import News from "@/component/News";
+import FloatSidebar from "@/component/FloatSidebar";
 
 const slidedatas = [
   {
     image:
       "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-    text: "Take a virtual live tour of india's famous pilgrimages",
+    text: "NIGERIAN UNIVERSITIES MEDICAL LIBRARY WEBSITE",
   },
   {
     image:
       "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-    text: "Take a virtual live tour of india's famous pilgrimages",
+    text: "NIGERIAN UNIVERSITIES MEDICAL LIBRARY WEBSITE",
   },
   {
     image:
       "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-    text: "Take a virtual live tour of india's famous pilgrimages",
+    text: "NIGERIAN UNIVERSITIES MEDICAL LIBRARY WEBSITE",
   },
   {
     image:
       "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-    text: "Take a virtual live tour of india's famous pilgrimages",
+    text: "NIGERIAN UNIVERSITIES MEDICAL LIBRARY WEBSITE",
+  },
+];
+
+const bookDatas = [
+  {
+    id: 1,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 2,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 3,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 4,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 5,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 6,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
+  },
+  {
+    id: 7,
+    title: "Rich Dad poor Dad",
+    discription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam.",
+    img: "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    url: "#",
   },
 ];
 const Tour = () => {
@@ -43,7 +104,7 @@ const Tour = () => {
             <img src={slide.image} className="w-full object-cover" />
             <div className="absolute  bg-black/50 inset-0">
               <div className="h-full mx-20 md:mx-32  xl:ml-72 w-fit flex items-center lg:max-w-4xl">
-                <h2 className=" text-white font-bold sm:leading-[4rem]  lg:leading-[6rem] text-3xl sm:text-5xl lg:text-7xl">
+                <h2 className=" text-white font-bold  lg:leading-[4rem] text-2xl sm:text-4xl lg:text-6xl">
                   {slide.text}
                 </h2>
               </div>
@@ -65,6 +126,9 @@ const Tour = () => {
           </div>
         ))}
       </div>
+      <div>
+        <FloatSidebar />
+      </div>
       <div className="px-3">
         <div className="mt-10 mx-auto max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
           <input
@@ -80,49 +144,24 @@ const Tour = () => {
           </button>
         </div>
       </div>
-      <div className=" px-10 py-16 md:py-28 grid gap-10 md:gap-20 md:grid-cols-[fit-content(100%)_1fr_fit-content(100%)]">
-        <div className=" text-black font-bold text-2xl md:text-4xl">
-          <p>Location:</p>
-          <p>FUT</p>
-        </div>
-        <div className="tour__card-section2 grid gap-12">
-          <BookCard
-            title="Trimbakeshwar Temple"
-            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-            img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            url="#"
-          />
-          <BookCard
-            title="Trimbakeshwar Temple"
-            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-            img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            url="#"
-          />
-          <BookCard
-            title="Trimbakeshwar Temple"
-            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-            img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            url="#"
-          />
-          <BookCard
-            title="Trimbakeshwar Temple"
-            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-            img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            url="#"
-          />
-          <BookCard
-            title="Trimbakeshwar Temple"
-            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptas at explicabo non labore animi hic corporis quo quas laboriosam."
-            img="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-            url="#"
-          />
-        </div>
-        <div className="invisible hidden xl:flex flex-col text-2xl md:text-4xl">
-          <p>Location:</p>
-          <p>FUT</p>
-        </div>
+
+      <div className="px-3">
+        <News />
       </div>
-      <div className="mb-24 px-2">
+
+      <div className="px-10 md:px-32 py-16 md:py-28 tour__card-section2 grid gap-12">
+        {bookDatas.map((bookData) => (
+          <BookCard
+            key={bookData.id}
+            title={bookData.title}
+            discription={bookData.discription}
+            img={bookData.img}
+            url={bookData.url}
+          />
+        ))}
+      </div>
+
+      <div className="mb-24 px-10">
         <FAQ />
       </div>
       <Footer />

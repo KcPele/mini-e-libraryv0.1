@@ -12,6 +12,9 @@ module.exports = {
       screens: {
         nav: "880px",
       },
+      colors: {
+        cusgreen: "#4fc18f",
+      },
     },
   },
   plugins: [require("daisyui")],
