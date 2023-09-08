@@ -15,6 +15,8 @@ module.exports = {
       colors: {
         cusgreen: "#4fc18f",
         logoGradient: "linear-gradient(0deg, #008000, #008000)",
+        headerGradient:
+          "linear-gradient(180deg, rgba(0, 128, 0, 0.6) -14.97%, rgba(0, 0, 0, 0.6) 100%) ",
       },
     },
   },
