@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Footer from "@/component/Footer";
 import News from "@/component/News";
 import FloatSidebar from "@/component/FloatSidebar";
+import Sidebar from "@/component/Sidebar";
 
 const slidedatas = [
   {
@@ -93,79 +94,63 @@ const Tour = () => {
     setSearch(e.target.value);
   };
   return (
-    <main className="  bg-white  min-h-screen">
-      <div className="carousel relative  w-full max-h-[34rem] h-fit">
-        {slidedatas.map((slide, index) => (
-          <div
-            key={index}
-            id={`slide${index}`}
-            className=" carousel-item relative w-full"
-          >
-            <img src={slide.image} className="w-full object-cover" />
-            <div className="absolute  bg-black/50 inset-0">
-              <div className="h-full mx-20 md:mx-32  xl:ml-72 w-fit flex items-center lg:max-w-4xl">
-                <h2 className=" text-white font-bold  lg:leading-[4rem] text-2xl sm:text-4xl lg:text-6xl">
-                  {slide.text}
-                </h2>
-              </div>
-            </div>
-            <div className="absolute flex justify-between transform-translate-y-1/2 left-5 right-5 top-1/2">
-              {index != 0 ? (
-                <a href={`#slide${index - 1}`} className="btn btn-circle">
-                  ❮
-                </a>
-              ) : (
-                <p></p>
-              )}
-              {index != slidedatas.length - 1 && (
-                <a href={`#slide${index + 1}`} className="btn btn-circle">
-                  ❯
-                </a>
-              )}
-            </div>
+    <div className="flex h-screen bg-gray-100">
+      {/* <!-- sidebar --> */}
+      <Sidebar />
+
+      {/* <!-- Main content --> */}
+      <div className="flex flex-col flex-1 overflow-y-auto">
+        <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
+          <div className="flex items-center px-4">
+            <button className="text-gray-500 focus:outline-none focus:text-gray-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <input
+              className="mx-4 w-full border rounded-md px-4 py-2"
+              type="text"
+              placeholder="Search"
+            />
           </div>
-        ))}
-      </div>
-      <div>
-        <FloatSidebar />
-      </div>
-      <div className="px-3">
-        <div className="mt-10 mx-auto max-w-xl py-2 px-6 rounded-full bg-gray-50 border flex focus-within:border-gray-300">
-          <input
-            type="text"
-            placeholder="Search anything"
-            value={search}
-            onChange={handleSearch}
-            className="bg-transparent w-full focus:outline-none pr-4 font-semibold border-0 focus:ring-0 px-0 py-0"
-            name="search"
-          />
-          <button className="flex flex-row items-center justify-center min-w-[130px] px-4 rounded-full   border disabled:cursor-not-allowed disabled:opacity-50 transition ease-in-out duration-150 text-base bg-[#4fc18f] text-white font-medium tracking-wide border-transparent py-1.5 h-[38px] -mr-3">
-            Search
-          </button>
+          <div className="flex items-center pr-4">
+            <button className="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l-7-7 7-7m5 14l7-7-7-7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="p-4">
+          <h1 className="text-2xl font-bold">Welcome to my dashboard!</h1>
+          <p className="mt-2 text-gray-600">
+            This is an example dashboard using Tailwind CSS.
+          </p>
         </div>
       </div>
-
-      <div className="px-3">
-        <News />
-      </div>
-
-      <div className="px-10 md:px-32 py-16 md:py-28 tour__card-section2 grid gap-12">
-        {bookDatas.map((bookData) => (
-          <BookCard
-            key={bookData.id}
-            title={bookData.title}
-            discription={bookData.discription}
-            img={bookData.img}
-            url={bookData.url}
-          />
-        ))}
-      </div>
-
-      <div className="mb-24 px-10">
-        <FAQ />
-      </div>
-      <Footer />
-    </main>
+    </div>
   );
 };
 
