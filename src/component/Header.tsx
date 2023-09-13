@@ -2,9 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-headerGradient text-center min-h-[435px] w-full flex flex-col items-center justify-center gap-10 ">
+    <div className="bg-header bg-no-repeat bg-cover text-center min-h-[435px] w-full flex flex-col items-center justify-center gap-10 ">
       <div className="max-w-[800px] ">
-        <h1 className="font-bold text-2xl sm:text-4xl lg:text-6xl">
+        <h1 className="font-bold text-white text-2xl sm:text-4xl lg:text-6xl">
           Nigerian Universities Medical Library Website
         </h1>
       </div>

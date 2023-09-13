@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        home: "url('/assets/images/home-cross-background.png')",
+        header: "url('/assets/images/header-image.png')",
+        footer:
+          "linear-gradient(180deg, rgba(255, 255, 255, 0) -377.25%, #008000 100%)        ",
       },
       screens: {
         nav: "880px",
@@ -15,8 +17,6 @@ module.exports = {
       colors: {
         cusgreen: "#4fc18f",
         logoGradient: "linear-gradient(0deg, #008000, #008000)",
-        headerGradient:
-          "linear-gradient(180deg, rgba(0, 128, 0, 0.6) -14.97%, rgba(0, 0, 0, 0.6) 100%) ",
       },
     },
   },
